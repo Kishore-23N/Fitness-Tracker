@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { User, DailyProgress, FoodLog, ExerciseLog } from './types';
 import { formatDate } from './utils/calculations';
@@ -344,3 +343,7 @@ function App() {
 }
 
 export default App;
+
+/scripts": {
+  "postinstall": "npm rebuild bcrypt"
+}
