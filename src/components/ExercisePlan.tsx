@@ -93,9 +93,9 @@ export const ExercisePlan: React.FC<ExercisePlanProps> = ({ user, onAddExercise 
   const intensityMultiplier = { low: 0.7, medium: 1.0, high: 1.3 };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 px-2 sm:px-4 md:px-8 lg:px-0">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 text-white">
+  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-4 sm:p-6 text-white shadow-lg">
         <h1 className="text-2xl font-bold mb-2 flex items-center">
           <Dumbbell className="w-6 h-6 mr-2" />
           Personalized Exercise Plan
@@ -106,12 +106,12 @@ export const ExercisePlan: React.FC<ExercisePlanProps> = ({ user, onAddExercise 
       </div>
 
       {/* Weekly Overview */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-        <div className="p-6 border-b border-gray-100">
+      <div className="bg-white rounded-xl shadow-md border border-gray-100">
+        <div className="p-4 sm:p-6 border-b border-gray-100">
           <h3 className="text-xl font-semibold">Weekly Plan Overview</h3>
         </div>
-        <div className="p-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {categories.map((category) => (
               <div key={category.id} className="text-center p-4 bg-gray-50 rounded-lg">
                 <div className="text-2xl mb-2">{category.icon}</div>
@@ -126,7 +126,7 @@ export const ExercisePlan: React.FC<ExercisePlanProps> = ({ user, onAddExercise 
       </div>
 
       {/* Category Selection */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {categories.map((category) => (
           <button
             key={category.id}
@@ -147,8 +147,8 @@ export const ExercisePlan: React.FC<ExercisePlanProps> = ({ user, onAddExercise 
       </div>
 
       {/* Exercise Routine Display */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-        <div className="p-6 border-b border-gray-100">
+      <div className="bg-white rounded-xl shadow-md border border-gray-100">
+        <div className="p-4 sm:p-6 border-b border-gray-100">
           <h3 className="text-xl font-semibold capitalize flex items-center">
             {selectedCategory} Routine
             <span className="ml-2 text-sm font-normal text-gray-500">
@@ -157,7 +157,7 @@ export const ExercisePlan: React.FC<ExercisePlanProps> = ({ user, onAddExercise 
           </h3>
         </div>
 
-        <div className="p-6">
+  <div className="p-4 sm:p-6">
           <div className="space-y-4">
             {dailyRoutine.map((exercise, index) => (
               <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
@@ -200,16 +200,16 @@ export const ExercisePlan: React.FC<ExercisePlanProps> = ({ user, onAddExercise 
       </div>
 
       {/* Add Custom Exercise */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-        <div className="p-6 border-b border-gray-100">
+      <div className="bg-white rounded-xl shadow-md border border-gray-100">
+        <div className="p-4 sm:p-6 border-b border-gray-100">
           <h3 className="text-lg font-semibold flex items-center">
             <Plus className="w-5 h-5 mr-2" />
             Log Exercise Session
           </h3>
         </div>
 
-        <div className="p-6">
-          <div className="grid lg:grid-cols-4 gap-4">
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Select Exercise
@@ -294,7 +294,7 @@ export const ExercisePlan: React.FC<ExercisePlanProps> = ({ user, onAddExercise 
       </div>
 
       {/* Exercise Tips */}
-      <div className="bg-orange-50 rounded-xl p-6 border border-orange-200">
+  <div className="bg-orange-50 rounded-xl p-4 sm:p-6 border border-orange-200 shadow-md">
         <h3 className="text-lg font-semibold text-orange-900 mb-3 flex items-center">
           <Target className="w-5 h-5 mr-2" />
           Exercise Tips

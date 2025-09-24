@@ -27,9 +27,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ user, todayProgress, weekP
   const averageDailyBurn = weeklyCaloriesBurned / 7;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 px-2 sm:px-4 md:px-8 lg:px-0">
       {/* Welcome Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 text-white">
+  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-4 sm:p-6 text-white shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold mb-2">Welcome back, {user.name}!</h1>
@@ -45,7 +45,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ user, todayProgress, weekP
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
           <div className="flex items-center justify-between">
             <div>
@@ -100,9 +100,9 @@ export const Dashboard: React.FC<DashboardProps> = ({ user, todayProgress, weekP
       </div>
 
       {/* Today's Progress */}
-      <div className="grid lg:grid-cols-2 gap-6">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Calorie Tracking */}
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+  <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md border border-gray-100">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
             <Flame className="w-5 h-5 mr-2 text-orange-600" />
             Today's Calories
@@ -146,7 +146,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ user, todayProgress, weekP
         </div>
 
         {/* Weekly Overview */}
-        <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+  <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md border border-gray-100">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
             <TrendingUp className="w-5 h-5 mr-2 text-blue-600" />
             Weekly Overview
@@ -194,7 +194,7 @@ export const Dashboard: React.FC<DashboardProps> = ({ user, todayProgress, weekP
       </div>
 
       {/* Motivation Section */}
-      <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-6 text-white">
+  <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl p-4 sm:p-6 text-white shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-semibold mb-2 flex items-center">

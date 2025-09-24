@@ -95,9 +95,9 @@ export const Progress: React.FC<ProgressProps> = ({
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 px-2 sm:px-4 md:px-8 lg:px-0">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-6 text-white">
+  <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-4 sm:p-6 text-white shadow-lg">
         <h1 className="text-2xl font-bold mb-2 flex items-center">
           <BarChart3 className="w-6 h-6 mr-2" />
           Progress Tracking
@@ -108,7 +108,7 @@ export const Progress: React.FC<ProgressProps> = ({
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
           <div className="flex items-center justify-between">
             <div>
@@ -163,14 +163,14 @@ export const Progress: React.FC<ProgressProps> = ({
       </div>
 
       {/* Weekly Progress Chart */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-        <div className="p-6 border-b border-gray-100">
+      <div className="bg-white rounded-xl shadow-md border border-gray-100">
+        <div className="p-4 sm:p-6 border-b border-gray-100">
           <h3 className="text-xl font-semibold flex items-center">
             <TrendingUp className="w-5 h-5 mr-2" />
             Weekly Activity Chart
           </h3>
         </div>
-        <div className="p-6">
+  <div className="p-4 sm:p-6">
           <div className="space-y-4">
             {weekDates.map((date, index) => {
               const dayProgress = weekProgress.find(p => p.date === date) || {
@@ -241,13 +241,13 @@ export const Progress: React.FC<ProgressProps> = ({
       </div>
 
       {/* Top Foods and Exercises */}
-      <div className="grid lg:grid-cols-2 gap-6">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top Foods */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-          <div className="p-6 border-b border-gray-100">
+        <div className="bg-white rounded-xl shadow-md border border-gray-100">
+          <div className="p-4 sm:p-6 border-b border-gray-100">
             <h3 className="text-lg font-semibold">Most Consumed Foods</h3>
           </div>
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             {topFoods.length > 0 ? (
               <div className="space-y-3">
                 {topFoods.map((item, index) => (
@@ -276,11 +276,11 @@ export const Progress: React.FC<ProgressProps> = ({
         </div>
 
         {/* Top Exercises */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-          <div className="p-6 border-b border-gray-100">
+        <div className="bg-white rounded-xl shadow-md border border-gray-100">
+          <div className="p-4 sm:p-6 border-b border-gray-100">
             <h3 className="text-lg font-semibold">Most Done Exercises</h3>
           </div>
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             {topExercises.length > 0 ? (
               <div className="space-y-3">
                 {topExercises.map((item, index) => (
@@ -310,7 +310,7 @@ export const Progress: React.FC<ProgressProps> = ({
       </div>
 
       {/* Achievement Section */}
-      <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-6 text-white">
+  <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl p-4 sm:p-6 text-white shadow-lg">
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-lg font-semibold mb-2 flex items-center">

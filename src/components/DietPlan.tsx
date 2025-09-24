@@ -74,9 +74,9 @@ export const DietPlan: React.FC<DietPlanProps> = ({ user, onAddFood }) => {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 px-2 sm:px-4 md:px-8 lg:px-0">
       {/* Header */}
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-6 text-white">
+  <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-4 sm:p-6 text-white shadow-lg">
         <h1 className="text-2xl font-bold mb-2 flex items-center">
           <Apple className="w-6 h-6 mr-2" />
           Personalized Diet Plan
@@ -87,7 +87,7 @@ export const DietPlan: React.FC<DietPlanProps> = ({ user, onAddFood }) => {
       </div>
 
       {/* Meal Selection */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {meals.map((meal) => (
           <button
             key={meal.id}
@@ -109,8 +109,8 @@ export const DietPlan: React.FC<DietPlanProps> = ({ user, onAddFood }) => {
       </div>
 
       {/* Meal Plan Display */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-        <div className="p-6 border-b border-gray-100">
+      <div className="bg-white rounded-xl shadow-md border border-gray-100">
+        <div className="p-4 sm:p-6 border-b border-gray-100">
           <h3 className="text-xl font-semibold capitalize flex items-center">
             {selectedMeal} Plan
             <span className="ml-2 text-sm font-normal text-gray-500">
@@ -119,7 +119,7 @@ export const DietPlan: React.FC<DietPlanProps> = ({ user, onAddFood }) => {
           </h3>
         </div>
 
-        <div className="p-6">
+  <div className="p-4 sm:p-6">
           <div className="space-y-4">
             {mealPlan[selectedMeal].foods.map((food, index) => (
               <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
@@ -161,16 +161,16 @@ export const DietPlan: React.FC<DietPlanProps> = ({ user, onAddFood }) => {
       </div>
 
       {/* Add Custom Food */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100">
-        <div className="p-6 border-b border-gray-100">
+      <div className="bg-white rounded-xl shadow-md border border-gray-100">
+        <div className="p-4 sm:p-6 border-b border-gray-100">
           <h3 className="text-lg font-semibold flex items-center">
             <Plus className="w-5 h-5 mr-2" />
             Add Food to {selectedMeal}
           </h3>
         </div>
 
-        <div className="p-6">
-          <div className="grid lg:grid-cols-3 gap-4">
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Select Food
@@ -234,7 +234,7 @@ export const DietPlan: React.FC<DietPlanProps> = ({ user, onAddFood }) => {
       </div>
 
       {/* Nutrition Tips */}
-      <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+  <div className="bg-blue-50 rounded-xl p-4 sm:p-6 border border-blue-200 shadow-md">
         <h3 className="text-lg font-semibold text-blue-900 mb-3">Nutrition Tips</h3>
         <div className="grid md:grid-cols-2 gap-4 text-sm text-blue-800">
           <div>
