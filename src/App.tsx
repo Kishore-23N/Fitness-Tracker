@@ -343,7 +343,3 @@ function App() {
 }
 
 export default App;
-
-/scripts": {
-  "postinstall": "npm rebuild bcrypt"
-}
